@@ -6,7 +6,7 @@ def dot(x, y):
         multiple = multiple + x[i] * y[i]
     print(multiple)
 
-
+#main
 if __name__ == '__main__':
     x=[1,2]
     y=[1,2]
