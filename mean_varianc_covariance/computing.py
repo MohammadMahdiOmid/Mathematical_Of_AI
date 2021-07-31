@@ -4,9 +4,8 @@ import numpy as np
 
 def computing_mean(dataset):
     sum = 0
-
     # computing sum of dataset members
-    for i in range(len(dataset) + 1):
+    for i in dataset:
         sum = sum + int(i)
 
     print("sum is:", sum)
