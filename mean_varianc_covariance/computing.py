@@ -1,7 +1,7 @@
 import statistics
 import numpy as np
 
-
+#mean value
 def computing_mean(dataset):
     sum = 0
     # computing sum of dataset members
