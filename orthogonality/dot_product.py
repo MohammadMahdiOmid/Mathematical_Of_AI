@@ -1,4 +1,6 @@
 import math
+
+
 # simple dot product
 def dot(x, y):
     multiple = 0
@@ -7,6 +9,7 @@ def dot(x, y):
     print("dot product of x and y is:", multiple)
 
 
+# length of x and y
 def length(x, y):
     # length of x
     sum_x = 0
@@ -23,9 +26,24 @@ def length(x, y):
     print("Length of y is:", math.sqrt(sum_y))
 
 
+def distance(x, y):
+    print(len(x))
+    square = 0
+    result = [None] * len(x)
+
+    for i in range(len(x)):
+        # minus x and y
+        result[i] = x[i] - y[i]
+        # pow resault
+        square = square + result[i] ** 2
+    # computing square of result
+    print("Distance between x and y is:", math.sqrt(square))
+
+
 # main
 if __name__ == '__main__':
     x = [1, 2, 3]
     y = [2, 3, 4]
     dot(x, y)
     length(x, y)
+    distance(x, y)
