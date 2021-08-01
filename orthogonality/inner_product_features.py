@@ -43,6 +43,7 @@ def orthonomial(x, y):
         print("Two vectores are orthogonal")
     else:
         print("Two vectores are not orthogonal")
+
     ang = math.cos(frac)
 
     print("Angle of x and y is:", ang)
