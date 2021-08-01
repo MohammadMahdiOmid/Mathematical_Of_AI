@@ -1,5 +1,8 @@
 import math
 import fractions
+import matplotlib.pyplot as plt
+import numpy as np
+import sympy as sy
 
 
 # computing x**T Ay
@@ -10,7 +13,7 @@ def lengthOfVector(x):
     print("result is:", result)
 
 
-def orthonomial(x, y):
+def orthogonal(x, y):
     # dot product
     multiple = 0
     for i in range(len(x)):
@@ -39,7 +42,7 @@ def orthonomial(x, y):
     # angle of x and y
     frac = fractions.Fraction(multiple, int(mul_len))
     print("fraction is:", frac)
-    if frac == 0 :
+    if frac == 0:
         print("Two vectores are orthogonal")
     else:
         print("Two vectores are not orthogonal")
@@ -49,8 +52,25 @@ def orthonomial(x, y):
     print("Angle of x and y is:", ang)
 
 
+def integrate(x):
+    def f(x):
+        return sy.tan(x)
+
+    def g(x):
+        return sy.cos(x)
+
+    x = sy.symbols('x')
+    result = sy.integrate(f(x) * g(x), (x, -math.pi, math.pi))
+    if result == 0:
+        print("Sin and Cos are orthonomial", '\n', "result of integral is:", result)
+
+    else:
+        print("Sin and Cos are not orthonomial", '\n', "result of integral is:", result)
+
+
 if __name__ == '__main__':
     x = [1, 1]
     y = [-1, 1]
     lengthOfVector(x)
-    orthonomial(x, y)
+    orthogonal(x, y)
+    integrate(10)
